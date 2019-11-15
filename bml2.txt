@@ -1,0 +1,15 @@
+BML:
+public void saveOrder(Order o) {
+	
+	Session s1=s.openSession();
+	Transaction t=s1.beginTransaction();
+	s1.save(o);
+	t.commit();
+	s1.close();
+
+
+
+
+//add this code in booklist
+
+<td><a href="BuyNowServlet?bid=${b.bid}">Buy Now</a></td>

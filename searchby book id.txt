@@ -1,0 +1,9 @@
+
+public Book searchByBookId(int bid) {
+	
+	Session s1=s.openSession();
+	Criteria criteria=s1.createCriteria(Book.class);
+	criteria.add(Restrictions.eq("bid", bid));
+	Book book=(Book)criteria.uniqueResult();
+	return book;
+}
